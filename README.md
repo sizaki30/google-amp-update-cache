@@ -2,6 +2,7 @@
 This script uses the update-cache request to update the contents of the Google AMP cache. 
 
 ## Docs
+Before using this script, you need to generate the RSA key and place the public key on the server.
 https://developers.google.com/amp/cache/update-cache
 
 ## Usage

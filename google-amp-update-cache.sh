@@ -5,7 +5,7 @@
 #
 
 # Specify private key with full path.
-private_key='/Users/izaki/.ssh/private-apikey.pem'
+private_key='/home/sample/private-key.pem'
 
 if [[ -z $1 ]]; then
   echo 'This script uses the update-cache request to update the contents of the Google AMP cache.'
