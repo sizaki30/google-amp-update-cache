@@ -49,7 +49,8 @@ echo -n ${update_cache_request} | openssl dgst -sha256 -sign ${private_key} >.si
 
 # base64 web-safe
 # https://en.wikipedia.org/wiki/Base64#URL_applications
-signature_base64=$(base64 .signature.bin)
+# https://linux.die.net/man/1/base64
+signature_base64=$(base64 -w 0 .signature.bin)
 rm .signature.bin
 sig_val=$(echo -n ${signature_base64} | sed -e 's/+/-/g' -e 's/\//_/g' -e 's/=//g')
 
